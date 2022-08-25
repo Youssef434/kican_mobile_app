@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:kican_mobile_app/components/settings/account_settings_form.dart';
 import 'package:kican_mobile_app/components/settings/settings_field.dart';
