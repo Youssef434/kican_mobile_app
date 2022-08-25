@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 8, ),
+          margin: const EdgeInsets.symmetric(horizontal: 5, ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children : [NextAppointement()],
