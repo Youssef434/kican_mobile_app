@@ -4,6 +4,8 @@ import 'package:kican_mobile_app/components/child_progress/next_session_componen
 import 'package:kican_mobile_app/components/child_progress/traitement_component.dart';
 import 'package:kican_mobile_app/services/child_progress/generate_traitement.dart';
 
+import '../components/child_progress/session_card_component.dart';
+
 class ChildProgressPage extends StatelessWidget {
   const ChildProgressPage({Key? key}) : super(key: key);
 
@@ -71,6 +73,9 @@ class ChildProgressPage extends StatelessWidget {
             children: getTraitements(1),
           ),
           NextSessionComponent(day: 23, month: 'October', year: 2017,),
+          SessionCardComponent(sessionDate: DateTime(2022, 10, 18), sessionTitle: 'Third session',),
+          const SizedBox(height: 25,),
+          SessionCardComponent(sessionDate: DateTime(2022, 10, 8), sessionTitle: 'Session session', feedbackGiven: true,),
         ]),
       ),
     );

@@ -16,7 +16,7 @@ class NextSessionComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 32),
+      margin: const EdgeInsets.only(top: 32, bottom: 20),
       padding: const EdgeInsets.only(top: 5, bottom: 25, left: 45, right: 15),
       decoration: BoxDecoration(
         color: const Color.fromRGBO(0, 205, 188, 1),

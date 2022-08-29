@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:kican_mobile_app/shared/custom_text_input.dart';
 import 'package:kican_mobile_app/shared/global_shadow.dart';
 
+import '../services/shared/generate_stars.dart';
+
 class FeedbackPage extends StatefulWidget {
   const FeedbackPage({Key? key}) : super(key: key);
 
@@ -121,39 +123,8 @@ class Interaction extends StatefulWidget {
   State<Interaction> createState() => _InteractionState();
 }
 
-class Star extends StatelessWidget {
-  bool empty;
-
-  Star({Key? key, this.empty = false}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 2,
-          vertical: 0,
-        ),
-        child: Icon(
-          Icons.star,
-          color: empty
-              ? const Color.fromRGBO(242, 242, 242, 1)
-              : const Color.fromRGBO(255, 193, 74, 1.0),
-          size: 28,
-        ));
-  }
-}
-
 class _InteractionState extends State<Interaction> {
-  List<Widget> _getAllStars(int score) {
-    return [
-      ...List<Widget>.generate(score, (_) => Star()),
-      ...List<Widget>.generate(
-          6 - score,
-          (_) => Star(
-                empty: true,
-              ))
-    ];
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -175,7 +146,7 @@ class _InteractionState extends State<Interaction> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 35),
-          child: Row(children: _getAllStars(widget.value)),
+          child: Row(children: getAllStars(widget.value)),
         ),
         const SizedBox(
           height: 17,

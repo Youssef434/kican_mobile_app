@@ -42,6 +42,7 @@ class TraitementComponent extends StatelessWidget {
             progressColor: const Color.fromRGBO(0, 205, 188, 1),
             backgroundColor: Colors.transparent,
             animation: true,
+            animationDuration: 1200,
             reverse: true,
             footer: Container(
               margin: const EdgeInsets.only(top: 5),
