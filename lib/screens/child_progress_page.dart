@@ -14,7 +14,7 @@ class ChildProgressPage extends StatelessWidget {
         centerTitle: true,
         title: Container(
           margin: const EdgeInsets.symmetric(
-            horizontal: 15,
+            horizontal: 10,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,7 +62,12 @@ class ChildProgressPage extends StatelessWidget {
       ),
       backgroundColor: const Color.fromRGBO(242, 255, 254, 1),
       body: Container(
-
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 36),
+        child: Column(
+          children: [
+            Text('dede')
+          ],
+        ),
       ),
     );
   }
