@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kican_mobile_app/screens/child_progress_page.dart';
 import 'package:kican_mobile_app/screens/doctor_feedback.dart';
 import 'package:kican_mobile_app/screens/feedback_page.dart';
 import 'package:kican_mobile_app/screens/home_page.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
       // home: const FeedbackPage(),
       // home: const DoctorFeedback(),
       // home: const Settings(),
-      home: const HomePage(),
+      // home: const HomePage(),
+      home: const ChildProgressPage(),
     );
   }
 }
