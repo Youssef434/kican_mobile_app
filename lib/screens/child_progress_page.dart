@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kican_mobile_app/components/child_progress/next_session_component.dart';
+import 'package:kican_mobile_app/components/child_progress/traitement_component.dart';
+import 'package:kican_mobile_app/services/child_progress/generate_traitement.dart';
 
 class ChildProgressPage extends StatelessWidget {
   const ChildProgressPage({Key? key}) : super(key: key);
@@ -33,7 +36,6 @@ class ChildProgressPage extends StatelessWidget {
                         offset: Offset(0, 4))
                   ],
                 ),
-
                 child: Image.asset('images/rayan.png'),
               ),
               // const SizedBox(width: 15,),
@@ -62,12 +64,14 @@ class ChildProgressPage extends StatelessWidget {
       ),
       backgroundColor: const Color.fromRGBO(242, 255, 254, 1),
       body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 36),
-        child: Column(
-          children: [
-            Text('dede')
-          ],
-        ),
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        child: Column(children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: getTraitements(1),
+          ),
+          NextSessionComponent(day: 23, month: 'October', year: 2017,),
+        ]),
       ),
     );
   }
