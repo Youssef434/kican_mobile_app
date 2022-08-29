@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kican_mobile_app/components/home_page/child_progress_button.dart';
 import 'package:kican_mobile_app/components/home_page/next_appointement.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,23 +15,29 @@ class HomePage extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 5, ),
+          margin: const EdgeInsets.symmetric(
+            horizontal: 5,
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('👋🏻  Hi Ahmed', style: GoogleFonts.poppins(
-                    color: const Color.fromRGBO(0, 205, 188, 1),
-                    fontSize: 24,
-                    fontWeight: FontWeight.w600
-                  )),
-                  Text('How is Rayan feeling today?', style: GoogleFonts.poppins(
-                    color: const Color.fromRGBO(167, 211, 214, 1),
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                  ), textAlign: TextAlign.right,),
+                  Text('👋🏻  Hi Ahmed',
+                      style: GoogleFonts.poppins(
+                          color: const Color.fromRGBO(0, 205, 188, 1),
+                          fontSize: 24,
+                          fontWeight: FontWeight.w600)),
+                  Text(
+                    'How is Rayan feeling today?',
+                    style: GoogleFonts.poppins(
+                      color: const Color.fromRGBO(167, 211, 214, 1),
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    textAlign: TextAlign.right,
+                  ),
                 ],
               ),
               Container(
@@ -49,7 +56,10 @@ class HomePage extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children : [NextAppointement()],
+          children: const [
+            NextAppointement(),
+            ChildProgressButton(),
+          ],
         ),
       ),
       backgroundColor: const Color.fromRGBO(242, 255, 254, 1),

@@ -38,12 +38,12 @@ class NextAppointement extends StatelessWidget {
               ),
             ),
             Positioned(
+              right: -10,
+              bottom: 0,
               child: Image.asset(
                 'images/doctor.png',
                 // height: 10,
               ),
-              right: -10,
-              bottom: 0,
             ),
           ],
         ));
