@@ -3,6 +3,7 @@ import 'package:kican_mobile_app/screens/child_progress_page.dart';
 import 'package:kican_mobile_app/screens/doctor_feedback.dart';
 import 'package:kican_mobile_app/screens/feedback_page.dart';
 import 'package:kican_mobile_app/screens/home_page.dart';
+import 'package:kican_mobile_app/screens/personal_information.dart';
 import 'package:kican_mobile_app/screens/settings.dart';
 import 'package:kican_mobile_app/screens/verification_page.dart';
 
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
       // home: const DoctorFeedback(),
       // home: const Settings(),
       // home: const HomePage(),
-      home: const ChildProgressPage(),
+      // home: const ChildProgressPage(),
+      home: const PersonalInformation(),
     );
   }
 }

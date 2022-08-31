@@ -65,18 +65,20 @@ class ChildProgressPage extends StatelessWidget {
         ),
       ),
       backgroundColor: const Color.fromRGBO(242, 255, 254, 1),
-      body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: Column(children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: getTraitements(1),
-          ),
-          NextSessionComponent(day: 23, month: 'October', year: 2017,),
-          SessionCardComponent(sessionDate: DateTime(2022, 10, 18), sessionTitle: 'Third session',),
-          const SizedBox(height: 25,),
-          SessionCardComponent(sessionDate: DateTime(2022, 10, 8), sessionTitle: 'Session session', feedbackGiven: true,),
-        ]),
+      body: SingleChildScrollView(
+        child: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          child: Column(children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: getTraitements(1),
+            ),
+            NextSessionComponent(day: 23, month: 'October', year: 2017,),
+            SessionCardComponent(sessionDate: DateTime(2022, 10, 18), sessionTitle: 'Third session',),
+            const SizedBox(height: 25,),
+            SessionCardComponent(sessionDate: DateTime(2022, 10, 8), sessionTitle: 'Second session', feedbackGiven: true,),
+          ]),
+        ),
       ),
     );
   }

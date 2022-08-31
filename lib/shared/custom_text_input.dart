@@ -10,9 +10,10 @@ class CustomTextInput extends StatefulWidget {
   double? height;
   double bottom;
   IconData? iconData;
+  double fontSize;
 
   CustomTextInput(
-      {this.hint, this.value, this.maxLine = 1, this.isPassword = false, this.isEnabled = false, this.height, this.bottom = 0, this.iconData});
+      {this.hint, this.value, this.maxLine = 1, this.isPassword = false, this.isEnabled = false, this.height, this.bottom = 0, this.iconData, this.fontSize = 13});
 
   @override
   State<CustomTextInput> createState() => _CustomTextInputState();
@@ -42,7 +43,7 @@ class _CustomTextInputState extends State<CustomTextInput> {
         initialValue: widget.value,
         obscureText: widget.isPassword,
         style: GoogleFonts.poppins(
-          fontSize: 13,
+          fontSize: widget.fontSize,
           color: !isEnabled ? const Color.fromRGBO(175, 174, 190, 1) : const Color.fromRGBO(0, 0, 0, 1),
         ),
         keyboardType: TextInputType.multiline,
@@ -50,7 +51,7 @@ class _CustomTextInputState extends State<CustomTextInput> {
         decoration: InputDecoration(
           hintText: widget.hint,
           hintStyle: GoogleFonts.poppins(
-            fontSize: 13,
+            fontSize: widget.fontSize,
             fontWeight: FontWeight.w500,
             color: const Color.fromRGBO(175, 174, 190, 1),
           ),
@@ -58,7 +59,6 @@ class _CustomTextInputState extends State<CustomTextInput> {
           suffixIcon: widget.iconData != null ? TextButton(
             style: TextButton.styleFrom(primary: const Color.fromRGBO(242, 255, 254, 1)),
             onPressed: () {
-              print('fkjkjg');
               setState(() {
                 isEnabled = !isEnabled;
               });
